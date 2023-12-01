@@ -68,7 +68,7 @@ nav ul {
 }
 
 header {
-    background-image: url(../img/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg);
+    background: linear-gradient(45deg, black, transparent), url(../img/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
