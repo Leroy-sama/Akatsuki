@@ -34,14 +34,15 @@ nav a {
 }
 
 nav a:hover {
-    color: blue;
+    color: orangered;
 }
 
 .logo {
     font-size: 2rem;
-    font-weight: 700;
-
+    font-weight: 700;    
 }
+
+
 
 .burger {
     cursor: pointer;
@@ -84,8 +85,22 @@ header {
 }
 
 .home__heading {
-    padding: 0;
+    background-image: linear-gradient(120deg, orangered 0%, orangered 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
 }
+
+/* .home__heading::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: orangered;
+    display: block;
+    margin: auto;
+    transition: .5s;
+} */
 
 .home__description {
     text-align: center;
@@ -95,25 +110,26 @@ header {
 
 .founders h3,
 .founder__title {
-    color: blue;
+    color: orangered;
 }
 
 .home__link {
     text-decoration: none;
-    color: blue;
+    color: orangered;
     text-transform: uppercase;
-    padding: 0.9em 1.4em;
+    padding: 0.7em 1.2em;
     background-color: white;
+    transition: scale .3s ease-in-out;
 }
 
 .home__link:hover {
     color: white;
-    background-color: blue;
+    background-color: orangered;
     scale: 0.9;
 }
 
 .about__heading {
-    color: blue;
+    color: orangered;
     text-align: center;
 }
 
@@ -130,7 +146,8 @@ header {
     padding: 2em 0;
 }
 
-.wrapper__title {
+.wrapper__title,
+.businesses__heading {
     padding: 1em 0;
     font-size: 2rem;
     text-align: center;
@@ -168,7 +185,7 @@ header {
     text-decoration: none;
     padding: 0.3em 1em;
     color: rgb(1, 1, 15);
-    border: 1px solid blue;
+    border: 1px solid orangered;
 }
 
 .business:hover .business__image {
@@ -177,7 +194,7 @@ header {
 
 .bus__link:hover {
     color: white;
-    background-color: blue;
+    background-color: orangered;
 }
 
 .business__image {
@@ -207,15 +224,15 @@ header {
 .sbt-btn {
     padding: 0.5em 1em;
     margin: 1em 0;
-    color: blue;
-    border: 1px solid blue;
+    color: orangered;
+    border: 1px solid orangered;
     background-color: white;
     cursor: pointer;
 }
 
 .sbt-btn:hover {
     color: white;
-    background-color: blue;
+    background-color: orangered;
 }
 
 footer {
@@ -244,8 +261,9 @@ footer {
 
 .sub-btn {
     padding: 0.5em;
-    border: 1px solid blue;
-    color: blue;
+    border: 1px solid orangered;
+    color: white;
+    background-color: orangered;
 }
 
 .business__links ul li {
@@ -258,7 +276,7 @@ footer {
 }
 
 .business__links ul li a:hover {
-    color: blue;
+    color: orangered;
 }
 
 

@@ -42,6 +42,23 @@
         transform: translateX(0%);
     }
 
+    .home__description {
+        padding: 0 1em;
+    }
+
+    .about__heading {
+        padding: 1em 0;
+    }
+
+    .about__description {
+        padding: 0 1em;
+    }
+
+    .about__main,
+    .businesses__main {
+        padding: 0 1em;
+    }
+
     .contact {
         padding: 1em;
         display: grid;
