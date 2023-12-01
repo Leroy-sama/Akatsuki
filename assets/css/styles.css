@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     line-height: 1.5;
 }
 
@@ -12,15 +12,20 @@ img {
     width: 100%;
 }
 
-main {
-    padding: 0 1em;
+.footer__wrapper,
+.contact__wrapper,
+.businesses__main,
+.about__main {
+    max-width: 1200px;
+    margin: auto;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5em 1em;
+    padding: 1em 1.5em;
+    background-color: white;
 }
 
 nav a {
@@ -33,11 +38,14 @@ nav a:hover {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+
 }
 
 .burger {
     cursor: pointer;
+    display: none;
 }
 
 .bar {
@@ -46,6 +54,7 @@ nav a:hover {
     height: 2px;
     background-color: rgb(1, 1, 15);
     margin: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li {
@@ -54,33 +63,18 @@ nav ul li {
 
 nav ul {
     display: flex;
-    flex-direction: column;
     gap: 2em;
 }
 
-.nav-links {
-    position: relative;
+header {
+    background-image: url(../img/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.nav-links ul  {
-    position: absolute;
-    right: 100%;
-    top: 53px;
-    transition: .5s;
-    background-color: white;
-}
-
-.burger:hover ul {
-    right: -100%;
-} 
-
-
 
 .home,
 .home__wrapper {    
-    background-image: url(../img/management-photo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -90,7 +84,7 @@ nav ul {
 }
 
 .home__heading {
-    padding: 1.5em 0;
+    padding: 0;
 }
 
 .home__description {
@@ -108,7 +102,7 @@ nav ul {
     text-decoration: none;
     color: blue;
     text-transform: uppercase;
-    padding: .9em 1.4em;
+    padding: 0.9em 1.4em;
     background-color: white;
 }
 
@@ -128,9 +122,33 @@ nav ul {
     text-align: center;
 }
 
+.about__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.wrapper__title {
+    padding: 1em 0;
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(1, 1, 15);
+}
+
 .businesses {
     background-color: rgb(233, 231, 231);
-    padding: 3em 1em;
+    padding: 3em 0;
+}
+
+
+
+.businesses__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    padding: 2em 0;
 }
 
 .business {
@@ -148,7 +166,7 @@ nav ul {
 
 .bus__link {
     text-decoration: none;
-    padding: .3em 1em;
+    padding: 0.3em 1em;
     color: rgb(1, 1, 15);
     border: 1px solid blue;
 }
@@ -166,14 +184,13 @@ nav ul {
     filter: grayscale(100%);
     transition: filter 0.5s ease;
 }
-/* 
-.business__image:hover {
-    filter: grayscale(0%);
-} */
 
-.contact {
-    padding: 1em;
+
+
+.contact__wrapper {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em 0;
     gap: 2em;
 }
 
@@ -188,7 +205,7 @@ nav ul {
 }
 
 .sbt-btn {
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     margin: 1em 0;
     color: blue;
     border: 1px solid blue;
@@ -209,6 +226,7 @@ footer {
 
 .footer__wrapper {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2em;
 }
 
@@ -221,11 +239,11 @@ footer {
     color: white;
     outline: none;
     border: 1px solid white;
-    padding: .5em;
+    padding: 0.5em;
 }
 
 .sub-btn {
-    padding: .5em;
+    padding: 0.5em;
     border: 1px solid blue;
     color: blue;
 }
@@ -243,56 +261,4 @@ footer {
     color: blue;
 }
 
-@media (min-width: 700px) {
-    .burger {
-        display: none;
-    }
 
-    .hidden {
-        display: flex;
-    }
-
-    main {
-        padding: 0 3em;
-    }
-
-    .about__wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-
-    
-
-    .founders {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2em;
-    }
-
-    .businesses {
-        padding: 3em 0;
-    } 
-
-    .businesses__wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3em;
-        padding: 2em 0;
-    }
-
-    .contact {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 1em 2em;
-    }
-
-    footer {
-        padding: 1em 3em;
-    }
-
-    .footer__wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
