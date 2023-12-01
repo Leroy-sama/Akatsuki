@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+    padding: 0 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(1, 1, 15);
+}
+
+nav a:hover {
+    color: blue;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.burger {
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: rgb(1, 1, 15);
+    margin: 5px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.nav-links {
+    position: relative;
+}
+
+.nav-links ul  {
+    position: absolute;
+    right: 100%;
+    top: 53px;
+    transition: .5s;
+    background-color: white;
+}
+
+.burger:hover ul {
+    right: -100%;
+} 
+
+
+
+.home,
+.home__wrapper {    
+    background-image: url(../img/management-photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.home__heading {
+    padding: 1.5em 0;
+}
+
+.home__description {
+    text-align: center;
+    line-height: 1.5;
+    margin: 1.5em auto;
+}
+
+.founders h3,
+.founder__title {
+    color: blue;
+}
+
+.home__link {
+    text-decoration: none;
+    color: blue;
+    text-transform: uppercase;
+    padding: .9em 1.4em;
+    background-color: white;
+}
+
+.home__link:hover {
+    color: white;
+    background-color: blue;
+    scale: 0.9;
+}
+
+.about__heading {
+    color: blue;
+    text-align: center;
+}
+
+.about__description {
+    color: rgb(1, 1, 15);
+    text-align: center;
+}
+
+.businesses {
+    background-color: rgb(233, 231, 231);
+    padding: 3em 1em;
+}
+
+.business {
+    background-color: white;
+    margin-bottom: 2em;
+}
+
+.bus__desc {
+    padding: 1.5em;
+}
+
+.business__description {
+    margin: 1em 0;
+}
+
+.bus__link {
+    text-decoration: none;
+    padding: .3em 1em;
+    color: rgb(1, 1, 15);
+    border: 1px solid blue;
+}
+
+.business:hover .business__image {
+    filter: grayscale(0%);
+}
+
+.bus__link:hover {
+    color: white;
+    background-color: blue;
+}
+
+.business__image {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+/* 
+.business__image:hover {
+    filter: grayscale(0%);
+} */
+
+.contact {
+    padding: 1em;
+    display: grid;
+    gap: 2em;
+}
+
+.contact__form .form-control input,
+.contact__form .form-control textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(1, 1, 15);
+    padding: 1em;
+    font-size: 1rem;
+}
+
+.sbt-btn {
+    padding: .5em 1em;
+    margin: 1em 0;
+    color: blue;
+    border: 1px solid blue;
+    background-color: white;
+    cursor: pointer;
+}
+
+.sbt-btn:hover {
+    color: white;
+    background-color: blue;
+}
+
+footer {
+    background-color: rgb(1, 1, 15);
+    color: white;
+    padding: 1em;
+}
+
+.footer__wrapper {
+    display: grid;
+    gap: 2em;
+}
+
+.newletter__form {
+    padding: 1em 0;
+}
+
+.newletter__form input {
+    background-color: rgb(1, 1, 15);
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    padding: .5em;
+}
+
+.sub-btn {
+    padding: .5em;
+    border: 1px solid blue;
+    color: blue;
+}
+
+.business__links ul li {
+    list-style: none;
+}
+
+.business__links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.business__links ul li a:hover {
+    color: blue;
+}
+
+@media (min-width: 700px) {
+    .burger {
+        display: none;
+    }
+
+    .hidden {
+        display: flex;
+    }
+
+    main {
+        padding: 0 3em;
+    }
+
+    .about__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    
+
+    .founders {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    .businesses {
+        padding: 3em 0;
+    } 
+
+    .businesses__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3em;
+        padding: 2em 0;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1em 2em;
+    }
+
+    footer {
+        padding: 1em 3em;
+    }
+
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
